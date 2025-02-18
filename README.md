@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ### Using Pre-Trained Model
 3. **Download Pre-Trained Model:** 
-   - Download the pre-trained model from [Google Drive](https://drive.google) and place it in the `pretrained_models/` directory within this repository.
+   - Download the pre-trained model from [Google Drive](https://drive.google.com/file/d/11qR3dO6vpsC6VvFVJWVWhT12iuFE1O9i/view?usp=sharing) and place it in the `pretrained_models/` directory within this repository.
 4. **Extract Embeddings:** 
    - You can use the pre-trained model to generate gesture embedings by executing:
      ```bash
