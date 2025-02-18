@@ -41,6 +41,7 @@ A significant portion of the project involved preparing dialogue data. Relevant 
 ### Using Pre-Trained Model
 If you prefer to use the pre-trained model, follow these steps:
 1. **Download Pre-Trained Model:** 
+   - We provide a pre-trained model for unimodal, multimodal, and multimodal-x models (based on the saved models with good correlation with human judgments).
    - Download the pre-trained model from [Google Drive](https://drive.google.com/file/d/11qR3dO6vpsC6VvFVJWVWhT12iuFE1O9i/view?usp=sharing) and place it in the `pretrained_models/` directory within this repository.
 2. **Extract Embeddings:** 
    - You can use the pre-trained model to generate gesture embedings by executing:
