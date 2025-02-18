@@ -51,19 +51,20 @@ If you prefer to use the pre-trained model, follow these steps:
    - The extracted embeddings will be saved in the `data/` directory.
 
 ### Evaluation
-5. **Reference Resolution:** 
+1. **Reference Resolution:** 
    - You can evaluate the model by executing:
      ```bash
      python reference_resolution_classification.py
      ```
    - The evaluation results will be saved in the `results/` directory.
-6. **Reference Resolution With Dialogue History:**
+2. **Reference Resolution With Dialogue History:**
    - You can evaluate the model with dialogue history by
        ```bash
        python reference_resolution_with_dialogue_impact.py
        ```
    - The evaluation results will be saved in the `results/` directory.
-
+3. **The reported results in the paper are available in the `results/` directory.**
+   - The notebook `results/PaperResults.ipynb` provides a detailed analysis of the results.
 ## Results
 The results of the evaluation can be found in the `results/` directory.
 ### Citation

@@ -140,7 +140,7 @@ def reference_classification_mlp_torch(
             X_test = test_data[embeddings_type].to_numpy()
             X_test = np.stack(X_test, axis=0).astype(np.float32).squeeze()
             y_test = le.transform(test_data['referent_clean'])
-            test_dataset = MultiClassMLP(X_test, y_test, device=device)
+            test_dataset = ObjectDataset(X_test, y_test, device=device)
             test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
             for batch_X, batch_y in test_loader:
                 batch_y = batch_y.long()
@@ -187,11 +187,11 @@ def reference_classification_mlp_torch(
 if __name__ == '__main__':
     fix_seeds(seed=42)
 
-    gestures_info_exploded = pd.read_pickle('data/gestures_info_exploded.pkl')
+    gestures_info_exploded = pd.read_pickle('data/gestures_info_exploded_subparts.pkl')
 
     embeddings_types = [
-        ('semantic+multimodal-x', 'Semantic+Multimodal-X'),
-        ('semantic+multimodal', 'Semantic+Multimodal'),
+        ('semantic+multimodal-x', 'Semantic + Multimodal-X'),
+        ('semantic+multimodal', 'Semantic + Multimodal'),
         ('multimodal-x-skeleton-semantic', 'Multimodal-X'),
         ('semantic_embeddings', 'Semantic'),
         ('semantic+unimodal', 'Semantic + Unimodal'),
@@ -240,7 +240,7 @@ if __name__ == '__main__':
                 }
                 result_dict.update(metrics)  
                 results_list.append(result_dict)
-            results_file = 'results/reference_classification_results_final_paper.csv'
+            results_file = 'results/reference_resolution_with_dialogue_history_results.csv'
             if True:
                 # Save results to CSV after each run
                 results_to_save = pd.DataFrame(results_list)
@@ -254,4 +254,4 @@ if __name__ == '__main__':
             results_list = []
 
     df_stats = pd.DataFrame(results_stats)
-    df_stats.to_csv('results/reference_classification_results_final_paper.csv', index=False)
+    df_stats.to_csv('results/reference_resolution_with_dialogue_history_results_stats.csv', index=False)

@@ -210,17 +210,11 @@ def reference_classification_mlp_torch(
 if __name__ == '__main__':
     fix_seeds(seed=42)
 
-    gestures_info_exploded = pd.read_pickle('data/gestures_info_exploded.pkl')
+    gestures_info_exploded = pd.read_pickle('data/gestures_info_exploded_subparts.pkl')
     
     embeddings_types = [
-        ('semantic+multimodal-x', 'Semantic+Multimodal-X'),
-        ('semantic+multimodal', 'Semantic+Multimodal'),
         ('multimodal-x-skeleton-semantic', 'Multimodal-X'),
-        ('semantic_embeddings', 'Semantic'),
-        ('semantic+unimodal', 'Semantic + Unimodal'),
         ('unimodal_skeleton', 'Unimodal'),
-        ('random_skeleton_features', 'Random'),
-        ('multimodal-skeleton-semantic', 'Multimodal'), 
     ]
 
     param_grid = {
@@ -274,7 +268,7 @@ if __name__ == '__main__':
                         # Save results to CSV after each run
                         results_to_save = pd.DataFrame(results_list)
                         # check if file exists
-                        results_path = 'results/reference_classification_results_with_dialogue_history.csv'
+                        results_path = 'results/reference_resolution_with_dialogue_history_results.csv'
                         try:
                             df = pd.read_csv(results_path)
                             df = pd.concat([df, results_to_save])
@@ -283,4 +277,4 @@ if __name__ == '__main__':
                             results_to_save.to_csv(results_path, index=False)
                         results_list = []
     df_stats = pd.DataFrame(results_stats)
-    df_stats.to_csv('results/reference_classification_results_with_dialogue_history.csv', index=False)
+    df_stats.to_csv('results/reference_resolution_with_dialogue_history_results_stats.csv', index=False)
