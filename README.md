@@ -22,9 +22,7 @@ pip install -r requirements.txt
    - Make sure the downloaded files are extracted and placed in the `data/final_poses/` directory within this repository.
 
 2. **2. Prepare Dialogue Data** 
-A significant portion of the project involved preparing dialogue data. Relevant scripts can be found in `dialog_utils/`.
-
-The following links provide the data used in the project:
+A significant portion of the project involved preparing dialogue data. Relevant scripts can be found in `dialog_utils/`. The following links provide the data used in the project:
    - Segmented Gestures: Download the segmented gesture data from [Google Drive](https://drive.google.com/file/d/1Bt59e0q4KzGje8HyRhlxfs3nZ9VD6HAM/view?usp=sharing) and place the file in the `data/segmented_gestures/` directory within this repository.
    - Transcribed and aligned speech of CABB-S is placed in `dialog_utils/data/aligned_tagged_speech_per_word_small.csv`
    - Transcribed and aligned speech of CABB-L is placed in `dialog_utils/data/aligned_tagged_speech_per_word_large.csv`
@@ -35,8 +33,10 @@ The following links provide the data used in the project:
 2. **Train the Model:** 
    - Once the data is prepared, you can train the model by executing the following command:
      ```bash
-     python pre_train_main.py --config configs/pretraining/crossmodal/train_ssl_crossmodal_mmcontrastive_jointsformer_semantic.yaml
+     python pre_train_main.py --config configs/pretraining/multimimodal-x/train_multimimodal-x_semantic.yaml
      ```
+   - The trained model will be saved in the `workdir/` directory.
+   - For pre-training models with variant objectives, please check the config files in `configs/pretraining/`. E.g., you can change the text-semantic modality to speech based encoder (wav2vec2) by changing the `modalities` parameter in the config file.
 
 ### Using Pre-Trained Model
 If you prefer to use the pre-trained model, follow these steps:

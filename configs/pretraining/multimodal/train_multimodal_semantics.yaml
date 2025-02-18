@@ -1,5 +1,4 @@
-Experiment_name: mmcontrastive_masked_{}_lr_{}_batch_{}_temperature_{}_final
-# feeder, currently no preprocessing implemented so that we run the first evaluation using sequences of segments
+Experiment_name: multimodal_{}_lr_{}_batch_{}_temperature_{}_final
 feeder_args:
   data_path: './data/segmented_gestures/segmented_gestures_with_text.pkl'
   poses_path: data/selected_poses/poses_{}_synced_pp{}.npy
