@@ -121,7 +121,6 @@ def main():
     
     gestures_info_exploded['semantic+multimodal-x'] = gestures_info_exploded.apply( lambda x: np.concatenate([x['multimodal-x-skeleton-semantic'], x['semantic_embeddings']]), axis=1)
     gestures_info_exploded['semantic+multimodal'] = gestures_info_exploded.apply( lambda x: np.concatenate([x['multimodal-skeleton-semantic'], x['semantic_embeddings']]), axis=1)
-    gestures_info_exploded['random+semantic'] = gestures_info_exploded.apply( lambda x: np.concatenate([x['random_skeleton_features'], x['semantic_embeddings']]), axis=1)
     gestures_info_exploded['semantic+unimodal'] = gestures_info_exploded.apply( lambda x: np.concatenate([x['unimodal_skeleton'], x['semantic_embeddings']]), axis=1)
     
 
