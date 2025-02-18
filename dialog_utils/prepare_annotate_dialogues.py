@@ -468,9 +468,9 @@ def prepare_and_write_target_trials_per_pair(dataset_name, dataset, nlp, alignme
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Process dataset paths and configurations.")
     parser.add_argument('--spacy_model', type=str, default='nl_core_news_lg', choices=['nl_core_news_lg', 'nl_core_news_md', 'nl_core_news_sm'], help='Spacy model to use')
-    parser.add_argument('--audio_path', type=str, default='/home/eghaleb/data/{}_synced_pp{}.wav', help='Audio path template')
-    parser.add_argument('--elan_path_small', type=str, default='/home/eghaleb/data/ElanFiles/New_ELAN_files/pair*.eaf', help='ELAN files path for small dataset')
-    parser.add_argument('--elan_path_large', type=str, default='/home/eghaleb/data/ElanFiles/New_ELAN_files/*complete.eaf', help='ELAN files path for large dataset')
+    parser.add_argument('--audio_path', type=str, default='{}_synced_pp{}.wav', help='Audio path template')
+    parser.add_argument('--elan_path_small', type=str, default='ElanFiles/New_ELAN_files/pair*.eaf', help='ELAN files path for small dataset')
+    parser.add_argument('--elan_path_large', type=str, default='ElanFiles/New_ELAN_files/*complete.eaf', help='ELAN files path for large dataset')
     parser.add_argument('--output_path', type=str, default='dialog_utils/dialign/dialogues/{}/', help='Output path template')
     return parser.parse_args()
 

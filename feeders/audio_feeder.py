@@ -162,10 +162,10 @@ def collate_fn(batch):
    return audio, labels, lengths, index
 if __name__ == '__main__':
    fold = 0
-   train_labels_path ='/home/eghaleb/Projects/MMCSGD/data/CABB/{}/train_label.pkl'.format(fold)
-   train_audio_path = '/home/eghaleb/Projects/MMCSGD/data/CABB/{}/train_audio.npy'.format(fold)
-   test_audio_path = '/home/eghaleb/Projects/MMCSGD/data/CABB/{}/test_audio.npy'.format(fold)
-   test_labels_path = '/home/eghaleb/Projects/MMCSGD/data/CABB/{}/test_label.pkl'.format(fold)
+   train_labels_path ='data/CABB/{}/train_label.pkl'.format(fold)
+   train_audio_path = 'data/CABB/{}/train_audio.npy'.format(fold)
+   test_audio_path = 'data/CABB/{}/test_audio.npy'.format(fold)
+   test_labels_path = 'data/CABB/{}/test_label.pkl'.format(fold)
    train_dataset = AudioFeeder(train_audio_path, train_labels_path, normalize=False, apply_augmentation=True)
    test_dataset = AudioFeeder(test_audio_path, test_labels_path, normalize=False, apply_augmentation=False)
 

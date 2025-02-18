@@ -56,7 +56,7 @@ def get_gestures_and_speech_info(turns_info):
    for a_speaker in tqdm(unique_speakers):
       pair, speaker = a_speaker.split('_')
       pair_speaker = f"{pair}_{speaker}"
-      audio_path = os.path.join("/home/eghaleb/data", f"{pair}_synced_pp{speaker}.wav")
+      audio_path = os.path.join("data", f"{pair}_synced_pp{speaker}.wav")
       input_audio = whisper.load_audio(audio_path)
       audio_dict[pair_speaker] = input_audio
    model = whisper.load_model("large-v3")

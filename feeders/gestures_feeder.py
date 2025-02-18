@@ -139,7 +139,7 @@ class CABBFeeder(Dataset):
             data_path='./dialog_utils/data/gestures_info_with_text.csv',
             poses_path='./data/',
             modalities=["skeleton", "speech"],
-            audio_path='/data/clusterfs/mld/users/esagha/data/{}_synced_pp{}.wav',
+            audio_path='data/{}_synced_pp{}.wav',
             n_views=2,
             apply_skeleton_augmentations=True,
             skeleton_augmentations=None,
