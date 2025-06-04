@@ -1,9 +1,5 @@
 # I See What You Mean: Co-Speech Gestures for Reference Resolution in Multimodal Dialogue
 
-## Getting Started
-
-Follow these instructions to set up and run the project on your local machine.
-
 ### Prerequisites
 
 Create a virtual environment and install the required dependencies:
