@@ -63,7 +63,7 @@ If you prefer to use the pre-trained model, follow these steps:
 The results of the evaluation can be found in the `results/` directory.
 ### Citation
    ```
-   @inproceedings{ghaleb-etal-arxiv-2025, 
+   @inproceedings{ghaleb-etal-acl-2025, 
      author={Ghaleb, Esam and Khaertdinov, Bulat and {\"O}zy{\"u}rek, Asl{\i} and Fern{\'a}ndez, Raquel},
      title={I see what you mean: Co-Speech Gestures for Reference Resolution in Multimodal Dialogue},
      booktitle={Proceedings of the of the 63rd Conference of the Association for Computational Linguistics (ACL Findings)},
