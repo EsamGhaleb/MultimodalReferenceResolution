@@ -1,7 +1,5 @@
 # I See What You Mean: Co-Speech Gestures for Reference Resolution in Multimodal Dialogue
 
-This repository provides all the resources and scripts needed for the ARR February 2025 project.
-
 ## Getting Started
 
 Follow these instructions to set up and run the project on your local machine.
